@@ -9,6 +9,7 @@ import Login from './screens/Login'
 import Cart from './screens/Cart'
 import ProductDetail from './screens/ProductDetail'
 import About from './screens/About'
+import SearchProducts from './screens/SearchProducts'
 
 function App() {
   return (
@@ -19,8 +20,9 @@ function App() {
         <Route path="/signup" component={SignUp} />
         <Route path="/login" component={Login} />
         <Route path="/cart" component={Cart}/>
-        <Route path="/detail" component={ProductDetail} />
+        <Route path="/detail/:id" component={ProductDetail} />
         <Route path="/about" component={About} />
+        <Route path="/search" component={SearchProducts} />
       </main>
       <Footer />
     </Router>

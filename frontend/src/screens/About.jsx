@@ -5,7 +5,27 @@ function About() {
         <div style={{paddingTop: '50px', paddingBottom: '400px'}} className="cont">
                 <h1 className="mb-2" style={{fontSize: 30}}>О компании</h1>
 
-                <p>Lorem Ipsum gfdfgdgfdis simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <p>
+                Приветствуем на нашем сайте. Здесь мы немного расскажем о себе и прольем свет на процесс изготовления табака
+	для кальяна.
+	Мы сами выращиваем табак на своих полях и угодьях на солнечных холмах и равнинах Греции. Так как табак
+	растение не прихотливое к питательному грунту - супесчаная почва отлично подходит, которой как раз, в 
+	солнечной Греции полно. После высадки мы ухаживаем за табаком и растим его со всей осторожностью и заботой.
+	Когда листья окрашиваются в золотой цвет мы начинаем этап сбора урожая и последующую за ним просушку листьев.
+	После просушки мы отдаем сырье нашим превосходным мастерам, которые к слову, с табаком обращаются уже
+	очень много времени. Те в свою очередь начинают его приготовление по собственной технологии двойного варения.
+	Над тестированием получившегося продукта трудятся лучшие кальянщики городов Афины, Коринфа и Салоники.
+	Далее мы отправляем наш табак по розничным магазинам и на склады для распространения в интернет. 
+	Превосходный вкус табака порадует даже самого изощренного ценителя кальяна. Крепкий и дымный, прекрасная
+	консистенция и добротный вкус конкурирует и на голову обгоняет конкурентов в нише. Выбирай лушее с нами.
+	Все Юридические и правовые нормы соблюдены, и продукция соответствует заяленным на этикетке. 
+        <br></br><br></br><br></br><br></br>
+
+	телефон для связи: 8-888-888-88-88
+    <br></br><br></br>
+	телеграм: @telegram
+
+                </p>
         </div>
     )
 }

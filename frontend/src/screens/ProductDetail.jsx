@@ -1,31 +1,56 @@
 import React from 'react'
+import { useState } from 'react'
+import { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { productDetailAction } from '../actions/Actions'
+import { CART_ITEMS } from '../constants/Constants'
 
-function ProductDetail() {
+function ProductDetail({match}) {
+    const productId = match.params.id
+    const dispatch = useDispatch()
+    const productInfo = useSelector(state => state.productDetail)
+    const {product} = productInfo
+    const cart = useSelector(state => state.cart)
+    const {items} = cart
+    const [addItem, setAddItem] = useState(false)
+
+    const cartItems = localStorage.getItem("cart")
+    const cartItemsCopy = cartItems ? JSON.parse(cartItems) : []
+
+    useEffect(() => {
+        dispatch(productDetailAction(productId))
+    }, [dispatch, productId])
+
+    const addItemHandler = (e) => {
+        e.preventDefault()
+        cartItemsCopy.push(product)
+        localStorage.setItem("cart", JSON.stringify(cartItemsCopy));
+        dispatch({type: CART_ITEMS, payload: JSON.parse(localStorage.getItem('cart'))})
+        setAddItem(true)
+    }
+
     return (
         <div className='cont my-5'>
             <div class="row">
                 <div class="col-md-8">
                     <div class="product-image">
-                        <img src="images/featured/7.jpg" alt="" />
+                        <img src={product?.image} style={{maxHeight: 600}} alt="" />
                     </div>
                     <div class="product-information">
-                        <h2 style={{fontWeight: 800, fontSize: 30}}>Product Title Goes Here</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, esse, excepturi, sint ut et numquam reiciendis nulla in deserunt quaerat provident 
-                            obcaecati reprehenderit iusto ab neque corporis id temporibus architecto quia adipisci? Officia, aliquam, eveniet, molestias, voluptate porro assumenda 
-                            error soluta ab blanditiis voluptatum nisi voluptates debitis doloribus. Asperiores, provident fuga quibusdam id tenetur!<br></br><br></br>Nostrum quis quo 
-                            earum enim suscipit molestiae cupiditate reprehenderit? Atque, numquam nostrum adipisci suscipit exercitationem sed ullam. Odio, laborum, obcaecati 
-                            harum nostrum pariatur ipsam itaque minima atque expedita at amet dignissimos odit quisquam laboriosam eius officiis ratione alias sint rerum distinctio. 
-                            Quidem, veritatis consequuntur voluptas sunt quo deleniti reprehenderit deserunt atque minus non.
+                        <h2 style={{fontWeight: 800, fontSize: 30}}>{product?.name}</h2>
+                        <p>
+                            {product?.description}
                         </p>
                         <p class="product-infos">
-                            <span>Bundle Price: $450</span>
-                            <span>Discount: 30%</span>
+                            <span>Bundle Price: ${product?.price}</span>
+                            <span>Discount: {product?.discount}%</span>
                         </p>
-                        <ul class="product-buttons">
-                            <li>
-                                <a href="#" class="main-btn">Add to Cart</a>
-                            </li>
-                        </ul>
+                        <button onClick={addItemHandler} disabled={items?.length >= 4} className='btn btn-primary btn-lg'>Add to Cart</button>
+                        {addItem ? (
+                            <div className='alert alert-success mt-2'>
+                                Вы добавили товар в корзину
+                            </div>        
+                        ):null}
                     </div> 
                 </div> 
                 <div class="col-md-4 col-sm-8">
