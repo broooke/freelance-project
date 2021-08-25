@@ -24,7 +24,7 @@ export const productsListAction = (keyword='') => async (dispatch) => {
             type: PRODUCTS_REQUEST
         })
 
-        const {data} = await axios.get(`http://127.0.0.1:8000/api/products/${keyword}`)
+        const {data} = await axios.get(`https://freelance-project-kwork.herokuapp.com/api/products/${keyword}`)
 
         dispatch({
             type: PRODUCTS_SUCCESS,
@@ -46,7 +46,7 @@ export const productDetailAction = (id) => async (dispatch) => {
             type: PRODUCT_REQUEST
         })
 
-        const {data} = await axios.get(`http://127.0.0.1:8000/api/product/${id}/`)
+        const {data} = await axios.get(`https://freelance-project-kwork.herokuapp.com/api/product/${id}/`)
 
         dispatch({
             type: PRODUCT_SUCCESS,
@@ -73,7 +73,7 @@ export const userLoginAction = (username = '', password = '') => async (dispatch
             }
         }
 
-        const {data} = await axios.post('http://127.0.0.1:8000/api/login/', {'username': username, 'password': password}, config)
+        const {data} = await axios.post('https://freelance-project-kwork.herokuapp.com/', {'username': username, 'password': password}, config)
 
         dispatch({
             type: USER_LOGIN_SUCCESS,
@@ -112,7 +112,7 @@ export const userRegisterAction = (email = '', password = '') => async (dispatch
             }
         }
 
-        const {data} = await axios.post('http://127.0.0.1:8000/api/register/', {'email':email, 'password':password}, config)
+        const {data} = await axios.post('https://freelance-project-kwork.herokuapp.com/api/register/', {'email':email, 'password':password}, config)
 
         dispatch({
             type: USER_REGISTER_SUCCESS,
