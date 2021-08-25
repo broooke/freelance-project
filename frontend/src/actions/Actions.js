@@ -73,7 +73,7 @@ export const userLoginAction = (username = '', password = '') => async (dispatch
             }
         }
 
-        const {data} = await axios.post('https://freelance-project-kwork.herokuapp.com/', {'username': username, 'password': password}, config)
+        const {data} = await axios.post('https://freelance-project-kwork.herokuapp.com/api/login/', {'username': username, 'password': password}, config)
 
         dispatch({
             type: USER_LOGIN_SUCCESS,
