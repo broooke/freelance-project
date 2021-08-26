@@ -27,7 +27,7 @@ function Header() {
             <div className="first">
                 <div className="button-wrap container">
                     { userInfo ? (
-                        <button className='btn btn-outline-primary' onClick={logoutHandler}>Выйти</button>
+                        <a style={{borderLeft: '1px solid #dddddd', padding: '15px 10px', borderRight: '1px solid #dddddd'}} onClick={logoutHandler}>Sign Up</a>
                         ) : (
                             <>
                                 <a style={{borderLeft: '1px solid #dddddd', padding: '15px 10px', borderRight: '1px solid #dddddd'}} href="#/signup">Sign Up</a>
