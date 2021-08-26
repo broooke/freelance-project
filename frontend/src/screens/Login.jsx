@@ -22,7 +22,7 @@ function Login({history}) {
     }
 
     return (
-        <div style={{padding: '90px 0', marginBottom: 70}} className="cont">
+        <div style={{padding: '90px 0', marginBottom: 70}} className="container">
             <div className="d-flex justify-content-center">
             <form onSubmit={submitHandler} style={{width: 500}} className="border p-3">
                 <h1 class="h3 mb-3 fw-normal text-center">Логин</h1>

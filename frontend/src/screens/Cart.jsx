@@ -26,7 +26,7 @@ function Cart({history}) {
         history.push('/')
     }
     return (
-        <div style={{padding: '50px 0'}} className="cont">
+        <div style={{padding: '50px 0'}} className="container">
             <div className='d-flex mb-4 align-items-center justify-content-between'>
                 <h1 style={{fontSize: 30}}>Корзина</h1>
                 <h3 style={{fontSize: 30}}><b>${items.reduce((acc, item)=>acc + item.price, 0)}</b></h3>

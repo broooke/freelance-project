@@ -2,7 +2,7 @@ import React from 'react'
 
 function About() {
     return (
-        <div style={{paddingTop: '50px', paddingBottom: '400px'}} className="cont">
+        <div style={{paddingTop: '50px', paddingBottom: '400px'}} className="container">
                 <h1 className="mb-2" style={{fontSize: 30}}>О компании</h1>
 
                 <p>

@@ -12,7 +12,7 @@ function SearchProducts({history}) {
         dispatch(productsListAction(keyword))
     }, [dispatch, keyword])
     return (
-        <div style={{marginTop: 50, marginBottom: 60}} className='cont'>
+        <div style={{marginTop: 50, marginBottom: 60}} className='container'>
         <div className='row'>
             {products?.map((product, index) => (
                 <div key={index} class="col-md-3 col-sm-6">

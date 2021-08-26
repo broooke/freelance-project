@@ -1,9 +1,13 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 
 function NewProducts() {
+    const productsInfo = useSelector(state => state.productsList)
+    const {products} = productsInfo
+
     return (
         <div>
-            <div className="cont">
+            <div className="container">
                 <div class="row">
                     <div class="col-md-12 section-title">
                         <h2>New Products</h2>
@@ -13,44 +17,44 @@ function NewProducts() {
                     <div class="col-md-3 col-sm-6">
                         <div class="product-item">
                             <div class="product-thumb">
-                                <img src="images/gallery-image-2.jpg" alt="" />
+                                <img src={products[0]?.image} alt="" />
                             </div>
                             <div class="product-content">
-                                <h5><a href="#">Name of Shirt</a></h5>
-                                <span class="price">$40.00</span>
+                                <h5><a style={{fontWeight: 700}} href={`#/detail/${products[0]?.id}`}>{products[0]?.name}</a></h5>
+                                <span class="price">${products[0]?.price}</span>
                             </div>
                         </div>
                     </div> 
                     <div class="col-md-3 col-sm-6">
                         <div class="product-item">
                             <div class="product-thumb">
-                                <img src="images/gallery-image-3.jpg" alt="" />
+                                <img src={products[1]?.image} alt="" />
                             </div>
                             <div class="product-content">
-                                <h5><a href="#">Sport Shirt</a></h5>
-                                <span class="price">$40.00</span>
+                                <h5><a style={{fontWeight: 700}} href={`#/detail/${products[1]?.id}`}>{products[1]?.name}</a></h5>
+                                <span class="price">${products[1]?.price}</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6">
                         <div class="product-item">
                             <div class="product-thumb">
-                                <img src="images/gallery-image-4.jpg" alt="" />
+                                <img src={products[0]?.image} alt="" />
                             </div>
                             <div class="product-content">
-                                <h5><a href="#">Elegant Shirt</a></h5>
-                                <span class="price">$60.00</span>
-                            </div> 
-                        </div> 
-                    </div> 
+                                <h5><a style={{fontWeight: 700}} href={`#/detail/${products[0]?.id}`}>{products[0]?.name}</a></h5>
+                                <span class="price">${products[0]?.price}</span>
+                            </div>
+                        </div>
+                    </div>
                     <div class="col-md-3 col-sm-6">
                         <div class="product-item">
                             <div class="product-thumb">
-                                <img src="images/gallery-image-5.jpg" alt="" />
-                            </div> 
+                                <img src={products[1]?.image} alt="" />
+                            </div>
                             <div class="product-content">
-                                <h5><a href="#">Another New Shirt</a></h5>
-                                <span class="price">$80.00</span>
+                                <h5><a style={{fontWeight: 700}} href={`#/detail/${products[1]?.id}`}>{products[1]?.name}</a></h5>
+                                <span class="price">${products[1]?.price}</span>
                             </div>
                         </div>
                     </div> 

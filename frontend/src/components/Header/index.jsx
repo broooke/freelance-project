@@ -25,15 +25,13 @@ function Header() {
     return (
         <div className="header">
             <div className="first">
-                <div className="button-wrap cont">
+                <div className="button-wrap container">
                     { userInfo ? (
                         <button className='btn btn-outline-primary' onClick={logoutHandler}>Выйти</button>
                         ) : (
                             <>
-                                <a href="#/signup">
-                                    <button className='btn btn-outline-primary mx-2'>Регистрация</button>
-                                </a>
-                            <a href="#/login"><button className='btn btn-outline-primary'>Войти</button></a>
+                                <a style={{borderLeft: '1px solid #dddddd', padding: '15px 10px', borderRight: '1px solid #dddddd'}} href="#/signup">Sign Up</a>
+                                <a style={{padding: '15px 10px', borderRight: '1px solid #dddddd'}} href="#/login">Log In</a>
                             </>
                         )
                     }
@@ -41,7 +39,7 @@ function Header() {
             </div>
             
             <div className="second">
-                <div className="form-name-wrap cont">
+                <div className="form-name-wrap container">
                     <a href="#/"><h1>ОНЛАЙН МАГАЗИН</h1></a>
                     <form onSubmit={submitHandler}>
                         <input required value={q} onChange={(e) => setQ(e.target.value)} className="form-control" type="text" />
@@ -50,10 +48,10 @@ function Header() {
                 </div>
             </div>
             <div className="third">
-                <div className="links-wrap cont">
-                    <a href="#/"><button className="btn btn-outline-light mx-2">Товары</button></a>
-                    <a href="#/cart"><button className="btn btn-outline-light">Корзина</button></a>
-                    <a href="#/about"><button className="btn btn-outline-light mx-2">О компании</button></a>
+                <div className="links-wrap container">
+                    <a style={{borderLeft: '1px solid #3598db', padding: '20px 15px', borderRight: '1px solid #3598db', color: 'white'}} href="#/">Товары</a>
+                    <a style={{padding: '20px 15px', borderRight: '1px solid #3598db', color: 'white'}} href="#/cart">Корзина</a>
+                    <a style={{padding: '20px 15px', borderRight: '1px solid #3598db', color: 'white'}} href="#/about">О компании</a>
                 </div>
             </div>
         </div>

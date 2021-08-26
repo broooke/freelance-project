@@ -3,14 +3,16 @@ import React from 'react'
 function Footer() {
     return (
             <div style={{color: 'white'}} class="main-footer">
-            <div class="cont">
+            <div class="container">
                 <div class="row">
                     <div class="col-md-3">
                         <div class="footer-widget">
                             <h3 style={{fontWeight: 800, fontSize: 25, marginBottom: 10}} class="widget-title">О нас</h3>
                             Самый редкий табак и лучшего качества только у нас. Перейдите в раздел о компании за подробностями.<br></br>
-                            <a href="https://facebook.com"><button className='btn btn-light my-2'>Facebook</button></a><br></br>
-                            <a href="https://twitter.com"><button className='btn btn-light'>Twitter</button></a>
+                            <ul class="follow-us">
+                                <li><a href="https://facebook.com">Facebook</a></li>
+                                <li><a href="https://twitter.com">Twitter</a></li>
+                            </ul>
                         </div> 
                     </div> 
                     <div class="col-md-3">

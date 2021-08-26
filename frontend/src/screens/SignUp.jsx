@@ -28,7 +28,7 @@ function SignUp({history}) {
     }
 
     return (
-        <div style={{padding: '90px 0'}} className="cont">
+        <div style={{padding: '90px 0'}} className="container">
             <div className="d-flex justify-content-center">
             <form style={{width: 500}} onSubmit={submitHandler} className="border p-3">
                 <h1 class="h3 mb-3 fw-normal text-center">Регистрация</h1>
