@@ -21,19 +21,19 @@ function ProductsList() {
                 <div className="col-md-3">
                     <div className="product-item-1">
                         <div className="product-thumb">
-                            <img src={products[0]?.image} alt="Product Title" />
+                            <img src={products[products?.length - 1]?.image} alt="Product Title" />
                         </div>
                         <div style={{paddingBottom: 20}} className="product-content">
-                            <h4><a style={{fontWeight: 700}} href={`#/detail/${products[0]?.id}`}>{products[0]?.name}</a></h4>
-                            <span className="tagline mt-1">{products[0]?.partner}</span>
-                            <span className="price">${products[0]?.price}</span>
+                            <h4><a style={{fontWeight: 700}} href={`#/detail/${products[products?.length - 1]?.id}`}>{products[products?.length - 1]?.name}</a></h4>
+                            <span className="tagline mt-1">{products[products?.length - 1]?.partner}</span>
+                            <span className="price">${products[products?.length - 1]?.price}</span>
                             <p>
                                 {size.width <= 1200 ?
                                     <>
-                                        {products[0]?.short_description.slice(0, 40)}...
+                                        {products[products?.length - 1]?.short_description.slice(0, 40)}...
                                     </>
                                     : <>
-                                        {products[0]?.short_description}
+                                        {products[products?.length - 1]?.short_description}
                                     </>
                                 }
                             </p>
@@ -70,19 +70,19 @@ function ProductsList() {
                 <div className="col-md-4">
                     <div className="product-item-1">
                         <div className="product-thumb">
-                            <img src={products[1]?.image} alt="Product Title" />
+                            <img src={products[products?.length - 2]?.image} alt="Product Title" />
                         </div>
                         <div className="product-content">
-                            <h4><a style={{fontWeight: 700}} href={`#/detail/${products[1]?.id}`}>{products[1]?.name}</a></h4>
-                            <span className="tagline">{products[1]?.partner}</span>
-                            <span className="price">${products[1]?.price}</span>
+                            <h4><a style={{fontWeight: 700}} href={`#/detail/${products[products?.length - 2]?.id}`}>{products[products?.length - 2]?.name}</a></h4>
+                            <span className="tagline">{products[products?.length - 2]?.partner}</span>
+                            <span className="price">${products[products?.length - 2]?.price}</span>
                             <p>
                                 {size.width <= 1200 ?
                                     <>
-                                        {products[1]?.short_description.slice(0, 40)}...
+                                        {products[products?.length - 2]?.short_description.slice(0, 40)}...
                                     </>
                                     : <>
-                                        {products[1]?.short_description}
+                                        {products[products?.length - 2]?.short_description}
                                     </>
                                 }
                             </p>
